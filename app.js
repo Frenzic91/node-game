@@ -9,8 +9,9 @@ var io = require('socket.io')(app);
 // load file system module
 var fs = require('fs');
 
-/* http server listening on port 3000 */
+
 var port = 3000;
+/* http server listening on port 3000 */
 app.listen(port, '0.0.0.0');
 console.log('Server is listening on port %s...', port);
 
@@ -22,7 +23,7 @@ console.log('Server is listening on port %s...', port);
 function get_handler (req, res) {
 	/* parses the html file to be sent to the client,
 	loading the content into variable data */
-	fs.readFile(__dirname + '/index.html',
+	fs.readFile(__dirname + '/source/client/client.html',
 	/* function called after parsing, sends contents of
 	html if no error */
 	function f0 (err, data) {
