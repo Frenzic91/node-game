@@ -16,11 +16,11 @@ var Map = {
               // instantiate a Tile object
               var map_tile = Object.create(Tile);
               // initialize properties of the Tile
-              map_tile.constructor(tile_id, (tile_id / MAP_WIDTH), (tile_id % MAP_HEIGHT), false, GRASS_ID);
+              map_tile.constructor(tile_id, (tile_id % MAP_WIDTH), Math.floor(tile_id / MAP_WIDTH), false, GRASS_ID);
               // add the tile id to the tileset
               this._tileset.push(tile_id);
               // add the Tile to the tile lookup table
-              this._tile_lookup.tile_id = map_tile;
+              this._tile_lookup[tile_id] = map_tile;
           }
       },
       // getters and setters

@@ -10,9 +10,9 @@ var Tile = {
         this._sprite_id = sprite_id;
         // an event associated with the tile
         this._event = null;
-    }
+    },
     // getters and setters
     get_sprite_id: function f1 () {return this._sprite_id;},
-    get_x: function f2 () {return this._x;}
+    get_x: function f2 () {return this._x;},
     get_y: function f3 () {return this._y;}
 };

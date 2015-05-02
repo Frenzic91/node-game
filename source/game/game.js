@@ -29,8 +29,8 @@ var Game = {
         // run called, game is running
         this._running = true;
         // while game is running, draw the map
-        while (this._running) {
-            this._gfx.render_map(ctx, this._map);
-        }
+        //while (this._running) {
+            this._gfx.render_map(this._map);
+        //}
     }
 };
