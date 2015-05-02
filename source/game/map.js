@@ -1,4 +1,3 @@
-// imports
 $.getScript("constants.js");
 $.getScript("tile.js");
 
@@ -11,17 +10,17 @@ var Map = {
           // tile lookup table defined here
           this._tile_lookup = {};
       },
-      create_map: function f1 () {
+      initialize: function f1 () {
           // create a map with MAP_WIDTH * MAP_HEIGHT dimensions
           for (var tile_id = 0; tile_id < (MAP_WIDTH * MAP_HEIGHT); tile_id++) {
               // instantiate a Tile object
               var map_tile = Object.create(Tile);
               // initialize properties of the Tile
-              map_tile.constructor(tile_id, (tile_id / width), (tile_id % width), false, GRASS_ID);
-              // add the Tile to the tileset
+              map_tile.constructor(tile_id, (tile_id / MAP_WIDTH), (tile_id % MAP_HEIGHT), false, GRASS_ID);
+              // add the tile id to the tileset
               this._tileset.push(tile_id);
               // add the Tile to the tile lookup table
-              this._tile_lookup[tile_id] = map_tile;
+              this._tile_lookup.tile_id = map_tile;
           }
       },
       // getters and setters

@@ -4,10 +4,11 @@ var Tile = {
     constructor: function f0 (uid, x, y, collision, sprite_id) {
         // data member initialization
         this._uid = uid;
-        this._sprite_id = sprite_id;
         this._x = x;
         this._y = y;
         this._collision = collision;
+        this._sprite_id = sprite_id;
+        // an event associated with the tile
         this._event = null;
     }
     // getters and setters

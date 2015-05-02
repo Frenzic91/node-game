@@ -1,10 +1,35 @@
 <html>
     <head>
-        <title>Snick Online</title>
+        <title>Niksan Online</title>
+        <!-- send client all javascript files required to run the game on their side -->
         <script src="/socket.io/socket.io.js"></script>
+        <script src="http://frenzic91.koding.io/shared_code/map.js"></script>
+        <script src="http://frenzic91.koding.io/shared_code/constants.js"></script>
+        <script src="http://frenzic91.koding.io/shared_code/graphics.js"></script>
+        <script src="http://frenzic91.koding.io/shared_code/game.js"></script>
+        <script src="http://frenzic91.koding.io/shared_code/tile.js"></script>
+        <!-- tile graphics -->
+        <img id="grass" src="http://frenzic91.koding.io/images/grass.png"></img>
         <!--<script src="http://frenzic91.koding.io/source/client/client.js"></script>-->
     </head>
     <body>
-        <canvas id="game_canvas" width="800" height="600" style="border: 1px solid black"></canvas>
+        <canvas id="game_canvas" width="960" height="704" style="border: 1px solid black"></canvas>
+        
+        <script>
+        // to be transferred to client.js
+        /* entire game is running on client side at this point,
+        will be changed at a later date (server side authentication, interp) */
+        
+        var canvas = document.getElementByID("game_canvas");
+        var ctx = canvas.getContext("2d");
+        
+        var game = Object.create(Game);
+        
+        game.constructor();
+        game.initialize();
+        
+        // game loop, only renders graphics currently
+        game.run();
+        </script>
     </body>
 </html>
