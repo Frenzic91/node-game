@@ -15,4 +15,4 @@ var MAP_WIDTH = CANVAS_WIDTH / TILE_WIDTH;
 var MAP_HEIGHT = CANVAS_HEIGHT / TILE_HEIGHT;
 
 // sprite ids
-var GRASS_ID = 1;
+var GRASS_ID = "1";
