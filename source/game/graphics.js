@@ -16,9 +16,9 @@ var Graphics = {
         for (var sprite = 0; sprite < this._sprite_array.length; sprite++) {
             var sprite_name = this._sprite_array[sprite];
             var image = document.getElementById(sprite_name);
-            var trans_image = this.add_transparency(image, image.width, image.height);
+            //var trans_image = this.add_transparency(image, image.width, image.height);
             
-            this._image_table[sprite_name] = trans_image;
+            this._image_table[sprite_name] = image;
         }
     },
     // set alpha to 0 for (255, 0, 255) pixels
@@ -52,7 +52,7 @@ var Graphics = {
         
     },
     // rendering requires the canvas context and map
-    render_map: function f3 (map) {
+    render_viewport: function f3 (map) {
           // the map of tile ids
           var tileset = map.get_tileset();
           // the lookup table associating tile ids with actual Tile objects

@@ -31,7 +31,7 @@ var Game = {
         this._running = true;
         // while game is running, draw the map
         //while (this._running) {
-            this._gfx.render_map(this._map);
+            this._gfx.render_viewport(this._map);
         //}
     }
 };

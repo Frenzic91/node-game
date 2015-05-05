@@ -12,7 +12,7 @@ var Player = {
         this._current_map = map.get_tile_lookup();
         this._viewport_x = this._x - Math.floor(VIEW_WIDTH / 2);
         this._viewport_y = this._y - Math.floor(VIEW_HEIGHT / 2);
-        this._current_tile = this._current_map[this._x.toString() + this._y.toString()];
+        this._current_tile = this._current_map[this._x.toString() + ", " + this._y.toString()];
     },
     move: function f1 (data) {
         
@@ -49,7 +49,7 @@ var Player = {
 		var x_offset = x_dir * MOVE_OFFSET;
 		var y_offset = y_dir * MOVE_OFFSET;
 		
-		var next_tile = this._current_map[(this._x + x_offset).toString() + (this._y + y_offset).toString()];
+		var next_tile = this._current_map[(this._x + x_offset).toString() + ", " + (this._y + y_offset).toString()];
 		
 		if (next_tile.is_walkable()) {
 		    

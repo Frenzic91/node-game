@@ -21,9 +21,9 @@ var Map = {
               
               map_tile.constructor(tile_id, tile_x, tile_y, false, GRASS_ID);
               // add the tile id to the tileset
-              this._tileset.push(tile_x.toString() + tile_y.toString());
+              this._tileset.push(tile_x.toString() + ", " + tile_y.toString());
               // add the Tile to the tile lookup table
-              this._tile_lookup[tile_x.toString() + tile_y.toString()] = map_tile;
+              this._tile_lookup[tile_x.toString() + ", " + tile_y.toString()] = map_tile;
           }
       },
       // getters and setters
