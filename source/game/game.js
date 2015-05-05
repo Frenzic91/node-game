@@ -22,6 +22,7 @@ var Game = {
     initialize: function f1 () {
         // initialize the map
         this._map.initialize();
+        this._gfx.initialize();
         // map initialized, so game is initialized
         this._initialized = true;
     },
