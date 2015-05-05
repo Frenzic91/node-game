@@ -14,5 +14,6 @@ var Tile = {
     // getters and setters
     get_sprite_id: function f1 () {return this._sprite_id;},
     get_x: function f2 () {return this._x;},
-    get_y: function f3 () {return this._y;}
+    get_y: function f3 () {return this._y;},
+    is_walkable: function f4 () {return this._collision;}
 };
