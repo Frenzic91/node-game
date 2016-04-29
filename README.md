@@ -1,2 +1,2 @@
 # node-game
-RPG written using NodeJS framework
+Unfinished RPG written using NodeJS framework
